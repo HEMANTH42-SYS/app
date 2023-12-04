@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-docker-repo-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-docker-repo
+  template:
+    metadata:
+      labels:
+        app: my-docker-repo
+    spec:
+      containers:
+      - name: my-docker-repo
+        image: 688109409290.dkr.ecr.us-east-2.amazonaws.com/my-docker-repo:latest
