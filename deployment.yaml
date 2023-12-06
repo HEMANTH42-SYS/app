@@ -14,4 +14,7 @@ spec:
     spec:
       containers:
       - name: my-docker-repo
-        image: 688109409290.dkr.ecr.us-east-2.amazonaws.com/my-docker-repo:latest
+        image: 407191724477.dkr.ecr.us-east-2.amazonaws.com/cicd:latest
+        ports:
+        - containerPort: 80  # Assuming your application is listening on port 80
+
